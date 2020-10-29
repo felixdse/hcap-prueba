@@ -1,1 +1,24 @@
+import cv2
+import numpy as np
 
+imagen=cv2.imread('imagen.jpg')    leer la imagen
+imagen=cv2.ctvColor(imagen,cv2.COLOR_BGR2RGB)     cambiar a RGB
+print(imagen.shape)           imprime el tamaño
+print(imagen)
+print(imagen[0][0])           
+imagen=cv2.resize(imagen,(256,256))         cambia el tamaño
+cv2.imwrite('resizeimagen.jpg',imagen)         
+imagen= cv2.imread('imagen.jpg)
+imagen=cv2.cv2.cvtColor(imagen,cv2.Color_BGR2GRAY)
+print(imagen.shape)
+print(imagen[0][0])
+imagen[0][0]=0                       Pixel especifico
+imagen[0][1]=0
+imagen[0][2]=0
+cv2.imwrite('grayimagen.jpg',imagen)
+matriz=np.zeros(256,256),np.float32)
+pritn(matriz.shape)
+cv2.imwrite('matrizimagen.jpg',matriz)
+imagen=cv2.cvtColor(matriz,cv,COLOR_GRAY2BGR)
+print(imagen.shape)
+cv2.imwrite('matrizcolorimagen.jpg',imgagen)
